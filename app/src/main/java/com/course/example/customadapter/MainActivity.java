@@ -21,12 +21,12 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         //attach listener
         listView.setOnItemClickListener(this);
 
-        //create ArrayList valies
+        //create ArrayList values
         arrayList.add(new MyData(1, " Allison","987-576-4435"));
         arrayList.add(new MyData(2, " Robert","878-757-6768"));
         arrayList.add(new MyData(3, " Jason","657-576-5765"));
 
-        //create custom adapter and connect to LIstView
+        //create custom adapter and connect to ListView
         adapter = new MyAdapter(this, arrayList);
         listView.setAdapter(adapter);
     }
