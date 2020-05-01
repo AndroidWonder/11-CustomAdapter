@@ -4,14 +4,15 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.BaseAdapter;
+import android.widget.ArrayAdapter;
 import android.widget.TextView;
 import java.util.ArrayList;
-public class MyAdapter extends BaseAdapter {
+public class MyAdapter extends ArrayAdapter {
     private Context context;
     private ArrayList<MyData> arrayList;
     private TextView serialNum, name, contactNum;
     public MyAdapter(Context context, ArrayList<MyData> arrayList) {
+        super(context, 0, arrayList);
         this.context = context;
         this.arrayList = arrayList;
     }
