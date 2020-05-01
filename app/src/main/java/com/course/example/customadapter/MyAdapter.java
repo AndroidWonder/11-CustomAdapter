@@ -31,7 +31,7 @@ public class MyAdapter extends ArrayAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         convertView = LayoutInflater.from(context).inflate(R.layout.row, parent, false);
-        serialNum = convertView.findViewById(R.id.serailNumber);
+        serialNum = convertView.findViewById(R.id.serialNumber);
         name = convertView.findViewById(R.id.studentName);
         contactNum = convertView.findViewById(R.id.mobileNum);
         serialNum.setText(" " + arrayList.get(position).getNum());
