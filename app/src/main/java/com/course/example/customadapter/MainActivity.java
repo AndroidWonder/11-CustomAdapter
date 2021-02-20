@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         arrayList.add(new MyData(2, " Robert","8787576768"));
         arrayList.add(new MyData(3, " Jason","6575765765"));
         arrayList.add(new MyData(4, " Mary","6595765999"));
+        arrayList.add(new MyData(5, "Elizabeth","7188904376"));
 
         //create custom adapter and connect to ListView
         adapter = new MyAdapter(this, arrayList);
@@ -39,6 +40,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         String name = arrayList.get(position).getName();
         Toast.makeText(this, "Hello, " + name, Toast.LENGTH_LONG).show();
         String phone = arrayList.get(position).getMobileNumber();
+        //open dialer with implicit intent
         Uri uri = Uri.parse("tel:" + phone);
         Intent intent = new Intent(Intent.ACTION_DIAL, uri);
         startActivity(intent);

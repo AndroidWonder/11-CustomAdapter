@@ -11,24 +11,13 @@ public class MyAdapter extends ArrayAdapter {
     private Context context;
     private ArrayList<MyData> arrayList;
     private TextView serialNum, name, contactNum;
+
     public MyAdapter(Context context, ArrayList<MyData> arrayList) {
         super(context, 0, arrayList);
         this.context = context;
         this.arrayList = arrayList;
     }
 
-    @Override
-    public int getCount() {
-        return arrayList.size();
-    }
-    @Override
-    public Object getItem(int position) {
-        return position;
-    }
-    @Override
-    public long getItemId(int position) {
-        return position;
-    }
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
 
