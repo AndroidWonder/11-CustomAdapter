@@ -16,6 +16,7 @@ public class MyAdapter extends ArrayAdapter {
         this.context = context;
         this.arrayList = arrayList;
     }
+
     @Override
     public int getCount() {
         return arrayList.size();
