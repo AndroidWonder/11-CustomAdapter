@@ -1,14 +1,19 @@
 package com.course.example.customadapter;
 
 public class MyData {
+
     private int serialNum;
     private String name;
     private String mobileNumber;
+
+    //constructors
     public MyData(int num, String name, String mobileNumber) {
         this.serialNum = num;
         this.name = name;
         this.mobileNumber = mobileNumber;
     }
+
+    //accessors and mutators
     public int getNum() {
         return serialNum;
     }

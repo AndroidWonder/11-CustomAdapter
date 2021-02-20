@@ -30,10 +30,15 @@ public class MyAdapter extends ArrayAdapter {
     }
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
+
+        //call inflater to create a View from an xml layout file
         convertView = LayoutInflater.from(context).inflate(R.layout.row, parent, false);
+
+        //get references for row widgets
         serialNum = convertView.findViewById(R.id.serialNumber);
         name = convertView.findViewById(R.id.studentName);
         contactNum = convertView.findViewById(R.id.mobileNum);
+
         serialNum.setText(" " + arrayList.get(position).getNum());
         name.setText(arrayList.get(position).getName());
         contactNum.setText(arrayList.get(position).getMobileNumber());
