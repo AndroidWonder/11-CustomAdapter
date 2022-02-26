@@ -14,6 +14,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     ListView listView;
     ArrayList<MyData> arrayList = new ArrayList<>();
     MyAdapter adapter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,9 +38,12 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
     //create toast and open dialer for the person selected
     public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
+
         String name = arrayList.get(position).getName();
         Toast.makeText(this, "Hello, " + name, Toast.LENGTH_LONG).show();
+
         String phone = arrayList.get(position).getMobileNumber();
+
         //open dialer with implicit intent
         Uri uri = Uri.parse("tel:" + phone);
         Intent intent = new Intent(Intent.ACTION_DIAL, uri);
